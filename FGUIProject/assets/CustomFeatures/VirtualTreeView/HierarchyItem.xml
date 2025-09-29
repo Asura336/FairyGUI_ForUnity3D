@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,22" extention="Button" bgColorEnabled="true">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0">
+    <action type="change_page" fromPage="" toPage="1,2,3" objectId="n9_puy3" controller="itemHighlight" targetPage="1"/>
+    <action type="change_page" fromPage="" toPage="0" objectId="n9_puy3" controller="itemHighlight" targetPage="0"/>
+    <action type="change_page" fromPage="" toPage="1,2,3" objectId="n10_puy3" controller="itemHighlight" targetPage="1"/>
+    <action type="change_page" fromPage="" toPage="0" objectId="n10_puy3" controller="itemHighlight" targetPage="0"/>
+  </controller>
+  <controller name="expanded" pages="0,,1," selected="0"/>
+  <controller name="leaf" pages="0,,1," selected="0"/>
+  <controller name="editable" alias="可以编辑名称" pages="0,,1," selected="0"/>
+  <controller name="itemActive" alias="实体活动" pages="0,,1," selected="0"/>
+  <controller name="itemTouchable" alias="实体可以选中" pages="0,,1," selected="0"/>
+  <controller name="draggingItem" alias="列表中有项目被拖拽" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n1_uj4g" name="n1" xy="0,0" size="200,22" touchable="false" type="rect" lineSize="0" fillColor="#7f0a6df4" corner="2">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n2_uj4g" name="n2" xy="0,0" size="200,22" touchable="false" type="rect" lineSize="0" fillColor="#ff0a6df4" corner="2">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n5_puy3" name="indent" xy="0,0" size="24,22">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <component id="n6_puy3" name="treeFolderButton" src="e68i5" fileName="VirtualTreeView/treeFolderButton.xml" xy="26,-1" pivot="0,0.5" size="22,24">
+      <gearDisplay controller="leaf" pages="0"/>
+      <relation target="" sidePair="middle-middle"/>
+      <relation target="n5_puy3" sidePair="left-right"/>
+      <Button controller="expanded" page="1"/>
+    </component>
+    <loader id="n4_uj4g" name="icon" xy="52,2" pivot="0.5,0.5" size="18,18" aspect="true" url="ui://xms8bct0lppwz" align="center" vAlign="middle" fill="scale" shrinkOnly="true" color="#424242">
+      <gearColor controller="button" pages="0" values="#424242" default="#ffffff"/>
+      <relation target="" sidePair="middle-middle"/>
+      <relation target="n5_puy3" sidePair="left-right"/>
+    </loader>
+    <graph id="n11_puy3" name="rightBlock" xy="150,0" size="50,22" touchable="false" fillColor="#35009999">
+      <relation target="" sidePair="height-height,right-right"/>
+    </graph>
+    <component id="n9_puy3" name="activeButton" src="e68i9" fileName="VirtualTreeView/activeButton.xml" xy="152,0" size="22,22">
+      <relation target="" sidePair="middle-middle,right-right"/>
+      <Button checked="true" controller="itemActive" page="0"/>
+    </component>
+    <component id="n10_puy3" name="touchableButton" src="e68ic" fileName="VirtualTreeView/touchableButton.xml" xy="176,0" size="22,22">
+      <relation target="" sidePair="middle-middle,right-right"/>
+      <Button checked="true" controller="itemTouchable" page="0"/>
+    </component>
+    <graph id="n7_puy3" name="editFrame" xy="72,0" size="76,22" group="n8_puy3" touchable="false" type="rect" lineColor="#ff666666" fillColor="#00ffffff" corner="2">
+      <gearDisplay controller="editable" pages="1"/>
+      <relation target="n3_uj4g" sidePair="width-width,height-height,left-left,top-top"/>
+    </graph>
+    <text id="n3_uj4g" name="title" xy="72,0" size="76,22" group="n8_puy3" fontSize="12" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="标题内容">
+      <gearDisplay controller="editable" pages="0"/>
+      <gearLook controller="editable" pages="1" values="1,0,0,1" default="1,0,0,0"/>
+      <gearColor controller="button" pages="1,2,3" values="#ffffff,#000000|#ffffff,#000000|#ffffff,#000000" default="#333333,#000000"/>
+    </text>
+    <text id="n14_f4gk" name="titleInput" xy="72,0" size="76,22" group="n8_puy3" touchable="false" fontSize="12" color="#333333" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="标题内容" input="true">
+      <gearDisplay controller="editable" pages="1"/>
+      <gearLook controller="editable" pages="1" values="1,0,0,1" default="1,0,0,0"/>
+      <gearColor controller="button" pages="1,2,3" values="#ffffff,#000000|#ffffff,#000000|#ffffff,#000000" default="#333333,#000000"/>
+    </text>
+    <group id="n8_puy3" name="inputGroup" xy="72,0" size="76,22" advanced="true">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="n5_puy3" sidePair="left-right"/>
+    </group>
+    <component id="n12_tifh" name="top" src="e68if" fileName="VirtualTreeView/HierarchyItemTopHighlight.xml" xy="0,0" size="200,7">
+      <gearDisplay controller="draggingItem" pages="1"/>
+      <relation target="" sidePair="width-width,top-top"/>
+    </component>
+    <component id="n13_tifh" name="bottom" src="e68ig" fileName="VirtualTreeView/HierarchyItemBottomHighlight.xml" xy="0,15" pivot="0,1" size="200,7">
+      <gearDisplay controller="draggingItem" pages="1"/>
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </component>
+  </displayList>
+  <Button mode="Check"/>
+</component>

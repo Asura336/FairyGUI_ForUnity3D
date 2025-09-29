@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,20" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <graph id="n4_o1mr" name="n4" xy="0,0" size="100,20" type="rect" corner="4">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n3_o1mr" name="handle" xy="-4,0" size="10,20" type="rect" lineSize="0" fillColor="#00ffffff"/>
+    <text id="n5_o1mr" name="title" xy="6,0" size="89,20" fontSize="12" color="#131313" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="111" input="true">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

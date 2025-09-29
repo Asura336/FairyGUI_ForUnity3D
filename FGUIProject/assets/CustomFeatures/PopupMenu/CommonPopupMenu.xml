@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,100">
+  <displayList>
+    <graph id="n2_7q7d" name="n2" xy="-6,-6" size="220,120" touchable="false" customData="{&#xA;  &quot;rgbHex&quot;: &quot;#000000&quot;,&#xA;  &quot;alpha100&quot;: 20, &#xA;  &quot;shadowWidth&quot;: 10.0,&#xA;  &quot;rectRadius&quot;: 4&#xA;}" type="rect" lineSize="14" lineColor="#00000000" fillColor="#80000000" corner="14">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n0_7q7d" name="n0" xy="0,0" size="200,100" type="rect" lineSize="0" lineColor="#ffa0a0a0" fillColor="#fff0f0f0" corner="2">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <list id="n1_7q7d" name="list" xy="0,0" size="200,100" overflow="scroll" scrollBarFlags="132" margin="2,2,2,2" scrollBarRes="ui://xms8bct0rv49s," lineGap="1" defaultItem="ui://xms8bct0op8di" align="center" autoClearItems="true">
+      <relation target="" sidePair="width-width"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+  <relation target="n1_7q7d" sidePair="height-height"/>
+</component>

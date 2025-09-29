@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="108,40">
+  <controller name="changeAlpha" pages="0,,1," selected="1"/>
+  <displayList>
+    <component id="n44_jj7y" name="n44" src="jj7y15" fileName="Shapes/SDFShape_changeAlphaCom.xml" xy="0,0">
+      <gearLook controller="changeAlpha" pages="0" values="0,0,0,1" default="1,0,0,1"/>
+    </component>
+    <component id="n45_jj7y" name="n45" src="jj7y16" fileName="Shapes/SDFShape_changeAlphaCom1.xml" xy="56,0" alpha="0">
+      <gearLook controller="changeAlpha" pages="1" values="0,0,0,1" default="1,0,0,1"/>
+    </component>
+  </displayList>
+</component>

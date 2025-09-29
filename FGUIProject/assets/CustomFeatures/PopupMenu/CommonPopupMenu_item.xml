@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,23" extention="Button" bgColorEnabled="true" bgColor="#f0f0f0">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <controller name="checked" pages="0,no,1,yes,2,itemChecked" selected="2"/>
+  <controller name="nextMenu" pages="0,,1," selected="1"/>
+  <controller name="grayed" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n0_7q7d" name="n0" xy="0,0" size="200,23" touchable="false" type="rect" lineColor="#ff0d76f5" corner="2">
+      <gearDisplay controller="button" pages="1,2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n2_7q7d" name="title" xy="25,2" size="100,19" fontSize="12" color="#131313" vAlign="middle" autoSize="none" singleLine="true" autoClearText="true" text="title">
+      <gearColor controller="grayed" pages="0,1" values="#131313,#000000|#999999,#000000"/>
+      <relation target="" sidePair="middle-middle,rightext-right"/>
+    </text>
+    <text id="n3_7q7d" name="remark" xy="135,2" size="46,19" fontSize="12" color="#131313" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="remark">
+      <gearXY controller="nextMenu" pages="0,1" values="149,2|135,2"/>
+      <gearColor controller="grayed" pages="0,1" values="#131313,#000000|#999999,#000000"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </text>
+    <loader id="n4_7q7d" name="isChecked" xy="0,0" size="23,23" aspect="true" touchable="false" url="ui://xms8bct0rv49w" align="center" vAlign="middle" fill="scaleNoBorder">
+      <gearDisplay controller="checked" pages="2"/>
+      <gearLook controller="grayed" pages="1" values="1,0,1,0" default="1,0,0,0"/>
+      <relation target="" sidePair="middle-middle"/>
+    </loader>
+    <loader id="n7_7q7d" name="icon" xy="1,1" size="21,21" aspect="true" touchable="false" url="ui://xms8bct0op8dk" fill="scale" clearOnPublish="true">
+      <gearDisplay controller="checked" pages="0"/>
+      <gearLook controller="grayed" pages="1" values="1,0,1,0" default="1,0,0,0"/>
+      <relation target="" sidePair="middle-middle"/>
+    </loader>
+    <loader id="n6_7q7d" name="hasNext" xy="182,3" pivot="0.5,0.5" size="16,16" rotation="90" touchable="false" url="ui://xms8bct0rv49u" align="center" vAlign="middle" fill="scale" color="#454545">
+      <gearDisplay controller="nextMenu" pages="1"/>
+      <gearLook controller="grayed" pages="1" values="1,90,1,0" default="1,90,0,0"/>
+      <relation target="" sidePair="middle-middle,right-right"/>
+    </loader>
+  </displayList>
+  <Button mode="Radio"/>
+  <customProperty target="remark" propertyId="0" label="备注文本"/>
+</component>

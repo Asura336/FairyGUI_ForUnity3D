@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,4" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <graph id="n1_tifh" name="n1" xy="0,0" size="200,2" touchable="false" type="rect" lineSize="0" fillColor="#fff86022">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,top-top"/>
+    </graph>
+  </displayList>
+  <Button/>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="157,19" extention="Button">
+  <displayList>
+    <text id="n2_pjj5" name="title" xy="13,0" size="144,19" fontSize="12" color="#131313" autoSize="none" text="" input="true" prompt="[color=#666666]输入内容[/color]">
+      <relation target="" sidePair="width-width"/>
+    </text>
+    <graph id="n3_r3cv" name="handle" xy="-8,0" size="15,19" type="rect" lineSize="0" fillColor="#00ffffff">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+  </displayList>
+  <Button/>
+</component>

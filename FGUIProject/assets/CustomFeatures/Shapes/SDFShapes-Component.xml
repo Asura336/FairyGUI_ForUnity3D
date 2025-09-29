@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="117,165" mask="n43_o7y0">
+  <displayList>
+    <graph id="n34_o7y0" name="n34" xy="0,107" size="116,58" type="rect" lineSize="2" lineColor="#ff44448a" corner="12,0,12,0"/>
+    <graph id="n35_o7y0" name="n35" xy="0,107" size="2,12" type="rect" lineSize="0" fillColor="#aa33cc00"/>
+    <graph id="n36_o7y0" name="n36" xy="1,0" size="116,40" type="rect" lineSize="4" lineColor="#ffcccccc" corner="12,0,12,0"/>
+    <graph id="n37_o7y0" name="sdf-n37" xy="3,48" size="112,50" type="rect" lineColor="#ff006600" corner="12"/>
+    <graph id="n38_o7y0" name="sdf-n38" xy="0,107" size="12,2" type="rect" lineSize="0" fillColor="#aaff0000"/>
+    <text id="n39_o7y0" name="title" xy="29,123" size="52,19" fontSize="12" text="溢出可见"/>
+    <graph id="n40_o7y0" name="sdf-n40" xy="3,48" size="1,50" type="rect" lineSize="0" fillColor="#aa993333"/>
+    <graph id="n41_o7y0" name="sdf-n41" xy="16,56" size="41,16" type="rect" lineSize="0" lineColor="#ff006600" corner="12"/>
+    <graph id="n42_o7y0" name="sdf-n42" xy="53,75" size="41,16" type="rect" lineSize="0" lineColor="#ff006600"/>
+    <graph id="n43_o7y0" name="n43" xy="-18,-21" size="117,169" type="rect" lineSize="0" corner="0,0,0,40"/>
+  </displayList>
+</component>

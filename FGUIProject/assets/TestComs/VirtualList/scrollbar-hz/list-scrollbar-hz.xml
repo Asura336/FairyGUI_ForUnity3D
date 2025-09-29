@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,17" extention="ScrollBar">
+  <displayList>
+    <graph id="n0_m2o8" name="n0" xy="0,0" size="200,17" touchable="false" type="rect" lineSize="0" fillColor="#fff0f0f0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n1_m2o8" name="bar" xy="20,0" size="160,17">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n2_m2o8" name="arrow1" src="m2o89" fileName="VirtualList/scrollbar-hz/list-scrollbar-hz_arrow1.xml" xy="0,0">
+      <relation target="" sidePair="height-height"/>
+    </component>
+    <component id="n3_m2o8" name="arrow2" src="m2o8a" fileName="VirtualList/scrollbar-hz/list-scrollbar-hz_arrow2.xml" xy="180,0">
+      <relation target="" sidePair="height-height,right-right"/>
+    </component>
+    <component id="n4_m2o8" name="grip" src="m2o8b" fileName="VirtualList/scrollbar-hz/list-scrollbar-hz_grip.xml" xy="20,0">
+      <relation target="" sidePair="height-height"/>
+    </component>
+  </displayList>
+  <ScrollBar/>
+</component>

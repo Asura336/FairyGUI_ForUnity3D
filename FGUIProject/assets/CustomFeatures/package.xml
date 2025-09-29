@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="xms8bct0">
+  <resources>
+    <component id="nigz0" name="SDFShapes.xml" path="/Shapes/" exported="true"/>
+    <image id="adtf1" name="push pin.svg" path="/Shapes/imgs/" scale9grid="0,0,42,42" qualityOption="source" duplicatePadding="true" width="64" height="64"/>
+    <image id="adtf2" name="组 11@2x(1).png" path="/Shapes/imgs/" qualityOption="source" duplicatePadding="true"/>
+    <component id="e68i3" name="HierarchyTreeView.xml" path="/VirtualTreeView/" exported="true"/>
+    <component id="e68i4" name="HierarchyItem.xml" path="/VirtualTreeView/"/>
+    <component id="e68i5" name="treeFolderButton.xml" path="/VirtualTreeView/"/>
+    <image id="e68i6" name="tinyTriangleV.svg" path="/VirtualTreeView/img/" width="14" height="10"/>
+    <component id="e68i9" name="activeButton.xml" path="/VirtualTreeView/"/>
+    <image id="e68ia" name="eye_visible.svg" path="/VirtualTreeView/img/" width="36" height="36"/>
+    <image id="e68ib" name="eye_invisible.svg" path="/VirtualTreeView/img/" scale9grid="0,0,24,24" width="36" height="36"/>
+    <component id="e68ic" name="touchableButton.xml" path="/VirtualTreeView/"/>
+    <image id="e68id" name="hand_touchable.svg" path="/VirtualTreeView/img/" width="36" height="36"/>
+    <image id="e68ie" name="hand_untouchable.svg" path="/VirtualTreeView/img/" scale9grid="0,0,12,12" width="36" height="36"/>
+    <component id="e68if" name="HierarchyItemTopHighlight.xml" path="/VirtualTreeView/"/>
+    <component id="e68ig" name="HierarchyItemBottomHighlight.xml" path="/VirtualTreeView/"/>
+    <component id="e68ih" name="HierarchyPanel.xml" path="/VirtualTreeView/" exported="true"/>
+    <component id="op8di" name="CommonPopupMenu_item.xml" path="/PopupMenu/"/>
+    <image id="op8dk" name="编辑图标.svg" path="/PopupMenu/img/" width="32" height="32"/>
+    <component id="op8dm" name="CommonPopupMenu.xml" path="/PopupMenu/" exported="true"/>
+    <component id="op8do" name="CommonPopupMenu_separator.xml" path="/PopupMenu/" exported="true"/>
+    <component id="rv49p" name="CommonPopupMenu_scrollbar_arrow1.xml" path="/PopupMenu/"/>
+    <component id="rv49r" name="CommonPopupMenu_scrollbar_grip.xml" path="/PopupMenu/"/>
+    <component id="rv49s" name="CommonPopupMenu_scrollbar.xml" path="/PopupMenu/" exported="true"/>
+    <image id="rv49u" name="CollapseUp_lg_noHalo_16x.svg" path="/PopupMenu/img/" qualityOption="source" width="16" height="16"/>
+    <component id="rv49v" name="CommonPopupMenu_scrollbar_arrow2.xml" path="/PopupMenu/"/>
+    <image id="rv49w" name="CheckBoxChecked_16x.svg" path="/PopupMenu/img/" scale9grid="0,0,2,2" qualityOption="source" width="23" height="23"/>
+    <component id="o1mrx" name="NumberInputButton.xml" path="/NumberInput/" exported="true"/>
+    <image id="lppwz" name="Cube_16x.svg" path="/VirtualTreeView/img/" qualityOption="source" width="16" height="16"/>
+    <font id="r7iv11" name="VonwaonBitmap-12px.ttf" path="/Fonts/" renderMode="" samplePointSize="16"/>
+    <font id="r7iv12" name="SourceHanSansCN-Medium.otf" path="/Fonts/" renderMode="" samplePointSize="16"/>
+    <component id="o7y013" name="SDFShapes-Component.xml" path="/Shapes/"/>
+    <component id="o7y014" name="SDFShapes-Component-1.xml" path="/Shapes/"/>
+    <component id="jj7y15" name="SDFShape_changeAlphaCom.xml" path="/Shapes/"/>
+    <component id="jj7y16" name="SDFShape_changeAlphaCom1.xml" path="/Shapes/"/>
+    <component id="jj7y17" name="ChangeAlphaTest.xml" path="/Shapes/" exported="true"/>
+    <component id="kc8c18" name="CommonPopupMenu_label.xml" path="/PopupMenu/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

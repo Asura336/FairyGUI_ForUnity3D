@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <controller name="changeAlpha" pages="0,,1," selected="0"/>
+  <displayList>
+    <graph id="n0_adtf" name="n0" xy="20,20" size="126,157" type="rect" lineSize="0"/>
+    <graph id="n1_adtf" name="n1" xy="191,20" size="100,100" type="rect"/>
+    <graph id="n29_n3zv" name="n29" xy="200,81" size="37,29" type="rect" lineSize="2"/>
+    <graph id="n26_xot7" name="n26" xy="15,325" size="226,61" type="rect" lineSize="8" lineColor="#00333333" fillColor="#ff000000" corner="8"/>
+    <graph id="n4_adtf" name="n4" xy="20,324" size="222,57" type="rect" lineSize="0" corner="8"/>
+    <graph id="n6_adtf" name="n6" xy="264,319" size="116,58" type="rect" lineSize="2" lineColor="#ff44448a" corner="12,0,12,0">
+      <gearLook controller="changeAlpha" pages="0" values="1,0,0,1" default="0.33,0,0,1"/>
+    </graph>
+    <graph id="n8_adtf" name="n8" xy="264,319" size="2,12" type="rect" lineSize="0" fillColor="#aa33cc00"/>
+    <graph id="n9_adtf" name="n9" xy="265,212" size="116,40" type="rect" lineSize="4" lineColor="#ffcccccc" corner="12,0,12,0"/>
+    <graph id="n10_adtf" name="n10" xy="267,260" size="112,50" type="rect" lineColor="#ff006600" corner="12"/>
+    <graph id="n11_adtf" name="n11" xy="264,319" size="12,2" type="rect" lineSize="0" fillColor="#aaff0000"/>
+    <text id="n2_adtf" name="n2" xy="21,81" size="124,34" font="simhei" fontSize="24" color="#101010" text="无边框矩形"/>
+    <text id="n3_adtf" name="n3" xy="206,57" size="64,19" fontSize="12" color="#101010" text="有边框矩形"/>
+    <text id="n7_adtf" name="n7" xy="279,340" size="88,19" fontSize="12" text="有边框圆角矩形"/>
+    <graph id="n15_adtf" name="n15" xy="22,189" size="100,100" type="eclipse" lineSize="20" lineColor="#ff666666"/>
+    <graph id="n16_adtf" name="n16" xy="131,189" size="100,100" type="eclipse" lineSize="4" lineColor="#ff666666"/>
+    <graph id="n24_adtf" name="n24" xy="169,132" size="50,50" type="eclipse" lineColor="#ffff00ff" fillColor="#ffffff66"/>
+    <graph id="n27_xot7" name="sdfshadow-n27" xy="233,145" size="50,36" type="eclipse" lineSize="15" lineColor="#80ff00ff" fillColor="#ffffff66"/>
+    <graph id="n46_y4k2" name="n27" xy="289,141" size="50,36" type="eclipse" lineSize="15" lineColor="#00ff00ff" fillColor="#ffffff66"/>
+    <graph id="n22_adtf" name="n22" xy="156,214" size="50,50" type="eclipse" lineSize="6" lineColor="#ff66ff00" fillColor="#00ff0000"/>
+    <graph id="n17_adtf" name="n17" xy="131,189" size="100,4" type="rect" lineSize="0" fillColor="#6800ff00"/>
+    <graph id="n18_adtf" name="n18" xy="102,189" size="20,100" type="rect" lineSize="0" fillColor="#6800ff00"/>
+    <graph id="n19_adtf" name="n19" xy="102,189" size="1,100" type="rect" lineSize="0" fillColor="#9ecc0000"/>
+    <graph id="n20_adtf" name="n20" xy="131,192" size="100,1" type="rect" lineSize="0" fillColor="#680000ff"/>
+    <graph id="n21_adtf" name="n21" xy="267,260" size="1,50" type="rect" lineSize="0" fillColor="#aa993333"/>
+    <graph id="n23_adtf" name="n23" xy="131,189" size="100,1" type="rect" lineSize="0" fillColor="#680000ff"/>
+    <graph id="n25_adtf" name="n25" xy="169,181" size="50,1" type="rect" lineSize="0" fillColor="#680000ff"/>
+    <graph id="n28_n3zv" name="n28" xy="164,119" size="50,1" type="rect" lineSize="0" fillColor="#680000ff"/>
+    <graph id="n30_n3zv" name="n30" xy="204,108" size="50,2" type="rect" lineSize="0" fillColor="#680000ff"/>
+    <text id="n31_e8ra" name="n31" xy="44,338" size="172,34" font="ui://xms8bct0r7iv12" fontSize="24" color="#101010" text="无边框圆角矩形"/>
+    <graph id="n32_rv49" name="n32" xy="280,268" size="41,16" type="rect" lineSize="0" lineColor="#ff006600" corner="12"/>
+    <graph id="n33_rv49" name="n33" xy="317,287" size="41,16" type="rect" lineSize="2" lineColor="#ff006600" fillColor="#00ff0000"/>
+    <component id="n34_o7y0" name="n34" src="o7y013" fileName="Shapes/SDFShapes-Component.xml" xy="431,110"/>
+    <component id="n43_o7y0" name="n43" src="o7y014" fileName="Shapes/SDFShapes-Component-1.xml" xy="596,112"/>
+    <component id="n44_jj7y" name="n44" src="jj7y15" fileName="Shapes/SDFShape_changeAlphaCom.xml" xy="388,326" alpha="0">
+      <gearLook controller="changeAlpha" pages="0" values="0,0,0,1" default="1,0,0,1"/>
+    </component>
+    <component id="n45_jj7y" name="n45" src="jj7y16" fileName="Shapes/SDFShape_changeAlphaCom1.xml" xy="444,326">
+      <gearLook controller="changeAlpha" pages="1" values="0,0,0,1" default="1,0,0,1"/>
+    </component>
+  </displayList>
+</component>

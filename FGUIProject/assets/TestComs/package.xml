@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ymq3g19j">
+  <resources>
+    <component id="pjj50" name="InputListPanel.xml" path="/InputInList/" exported="true"/>
+    <component id="pjj51" name="ItemLabel.xml" path="/InputInList/"/>
+    <component id="r3cv2" name="inputField.xml" path="/InputInList/"/>
+    <component id="o1mry" name="NumberInputButtonTestPage.xml" path="/NumberInput/" exported="true"/>
+    <component id="m2o83" name="VirtualListTestPage.xml" path="/VirtualList/" exported="true"/>
+    <component id="m2o84" name="list-scrollbar_arrow1.xml" path="/VirtualList/scrollbar/"/>
+    <component id="m2o85" name="list-scrollbar_arrow2.xml" path="/VirtualList/scrollbar/"/>
+    <component id="m2o86" name="list-scrollbar_grip.xml" path="/VirtualList/scrollbar/"/>
+    <component id="m2o87" name="list-scrollbar.xml" path="/VirtualList/scrollbar/" exported="true"/>
+    <component id="m2o88" name="list-item.xml" path="/VirtualList/"/>
+    <component id="m2o89" name="list-scrollbar-hz_arrow1.xml" path="/VirtualList/scrollbar-hz/"/>
+    <component id="m2o8a" name="list-scrollbar-hz_arrow2.xml" path="/VirtualList/scrollbar-hz/"/>
+    <component id="m2o8b" name="list-scrollbar-hz_grip.xml" path="/VirtualList/scrollbar-hz/"/>
+    <component id="m2o8c" name="list-scrollbar-hz.xml" path="/VirtualList/scrollbar-hz/" exported="true"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

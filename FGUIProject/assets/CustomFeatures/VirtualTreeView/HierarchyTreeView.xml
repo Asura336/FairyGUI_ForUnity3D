@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,200" initName="fakeTree">
+  <displayList>
+    <list id="n0_c8r6" name="list" xy="0,0" size="200,200" selectionMode="multiple" overflow="scroll" scrollBarFlags="132" defaultItem="ui://xms8bct0e68i4" autoClearItems="true" foldInvisibleItems="true" treeView="true" indent="12" clickToExpand="0">
+      <relation target="" sidePair="width-width,height-height"/>
+      <item level="0"/>
+      <item level="1"/>
+      <item level="1"/>
+      <item level="2"/>
+      <item level="2"/>
+      <item level="3"/>
+      <item level="0"/>
+      <item level="1"/>
+      <item level="1"/>
+      <item level="1"/>
+      <item level="0"/>
+      <item level="0"/>
+    </list>
+  </displayList>
+</component>

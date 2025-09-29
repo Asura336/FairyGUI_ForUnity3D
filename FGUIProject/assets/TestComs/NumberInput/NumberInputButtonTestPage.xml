@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="400,300">
+  <displayList>
+    <graph id="n2_o1mr" name="bg" xy="0,0" size="400,300" type="rect">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n0_o1mr" name="integer" src="o1mrx" fileName="NumberInput/NumberInputButton.xml" xy="81,54" customData="{&#xA;    &quot;dx&quot;: 0.1,&#xA;    &quot;integer&quot;: true&#xA;}" pkg="xms8bct0"/>
+    <component id="n1_o1mr" name="float" src="o1mrx" fileName="NumberInput/NumberInputButton.xml" xy="81,128" customData="{&#xD;&#xA;    &quot;dx&quot;: 0.1,&#xD;&#xA;    &quot;integer&quot;: false&#xD;&#xA;}" pkg="xms8bct0"/>
+    <text id="n3_o1mr" name="n3" xy="33,54" size="40,19" fontSize="12" color="#131313" text="整数："/>
+    <text id="n4_o1mr" name="n4" xy="33,128" size="40,19" fontSize="12" color="#131313" text="小数："/>
+  </displayList>
+</component>

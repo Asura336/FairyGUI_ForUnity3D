@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="40,20" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <graph id="n2_m2o8" name="icon" xy="0,0" size="40,20" touchable="false" type="rect" lineSize="0" fillColor="#ffcccccc">
+      <gearDisplay controller="button" pages=""/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n1_m2o8" name="n1" xy="0,0" size="40,20" touchable="false" type="rect" lineColor="#ff1575ec" fillColor="#00fafafa" corner="2">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <text id="n3_m2o8" name="title" xy="0,0" size="40,20" fontSize="12" color="#131313" vAlign="middle" letterSpacing="1" autoSize="none" singleLine="true" text="">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

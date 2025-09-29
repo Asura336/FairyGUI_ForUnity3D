@@ -1,0 +1,25 @@
+{
+  "font": "ui://xms8bct0r7iv11",
+  "fontSize": 12,
+  "textColor": "#131313",
+  "fontAdjustment": false,
+  "colorScheme": [
+    "正文 #131313"
+  ],
+  "fontSizeScheme": [
+    "正文 12"
+  ],
+  "fontScheme": [
+    "默认字体"
+  ],
+  "scrollBars": {
+    "horizontal": "",
+    "vertical": "",
+    "defaultDisplay": "visible"
+  },
+  "tipsRes": "",
+  "buttonClickSound": "",
+  "pivot": "default",
+  "listClearOnPublish": false,
+  "fileName": "Common"
+}

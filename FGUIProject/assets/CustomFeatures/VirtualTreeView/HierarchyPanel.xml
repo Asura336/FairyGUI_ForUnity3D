@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <graph id="n1_e68i" name="panel" xy="2,2" size="210,596" type="rect">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <component id="n0_e68i" name="fakeTree" src="e68i3" fileName="VirtualTreeView/HierarchyTreeView.xml" xy="7,7" size="200,586">
+      <relation target="n1_e68i" sidePair="width-width,height-height"/>
+    </component>
+  </displayList>
+</component>

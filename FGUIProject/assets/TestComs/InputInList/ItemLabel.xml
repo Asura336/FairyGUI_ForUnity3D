@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="320,34" extention="Label">
+  <displayList>
+    <text id="n0_pjj5" name="title" xy="8,0" size="142,34" fontSize="12" vAlign="middle" autoSize="none" singleLine="true" text="标题文字">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+    <component id="n2_pjj5" name="input" src="r3cv2" fileName="InputInList/inputField.xml" xy="155,7"/>
+  </displayList>
+</component>

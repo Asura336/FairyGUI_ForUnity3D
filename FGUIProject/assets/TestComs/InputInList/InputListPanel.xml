@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <displayList>
+    <graph id="n1_pjj5" name="n1" xy="302,64" size="505,535" type="rect"/>
+    <list id="n0_pjj5" name="list" xy="314,80" size="480,506" overflow="scroll" defaultItem="ui://ymq3g19jpjj51">
+      <item title="标题1"/>
+      <item title="标题2"/>
+      <item title="标题3"/>
+      <item title="标题4"/>
+      <item title="标题5"/>
+    </list>
+  </displayList>
+</component>

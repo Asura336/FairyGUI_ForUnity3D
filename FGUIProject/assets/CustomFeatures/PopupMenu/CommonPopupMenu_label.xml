@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,23" extention="Label" bgColorEnabled="true" bgColor="#f0f0f0">
+  <controller name="grayed" pages="0,,1," selected="0"/>
+  <controller name="expanded" pages="0,no,1,yes" selected="1"/>
+  <displayList>
+    <text id="n2_7q7d" name="title" xy="25,2" size="173,19" fontSize="12" color="#131313" vAlign="middle" ubb="true" autoSize="none" singleLine="true" autoClearText="true" text="title">
+      <gearColor controller="grayed" pages="0,1" values="#131313,#000000|#999999,#000000"/>
+      <relation target="" sidePair="middle-middle,rightext-right"/>
+      <relation target="n8_kc8c" sidePair="leftext-right"/>
+    </text>
+    <graph id="n8_kc8c" name="title-filter" xy="0,0" size="23,23">
+      <gearSize controller="expanded" pages="0" values="0,23,1,1" default="23,23,1,1"/>
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <loader id="n10_kc8c" name="icon" xy="1,1" size="21,21" aspect="true" touchable="false" url="ui://xms8bct0op8dk" fill="scale" clearOnPublish="true">
+      <gearDisplay controller="expanded" pages="1"/>
+      <gearLook controller="grayed" pages="1" values="1,0,1,0" default="1,0,0,0"/>
+      <relation target="" sidePair="middle-middle"/>
+    </loader>
+  </displayList>
+  <customProperty target="remark" propertyId="0" label="备注文本"/>
+</component>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <displayList>
+    <graph id="n1_m2o8" name="n1" xy="130,68" size="371,372" type="rect"/>
+    <list id="n0_m2o8" name="list" xy="134,71" size="362,364" overflow="scroll" scrollBarFlags="4" scrollBarRes="ui://ymq3g19jm2o87," defaultItem="ui://ymq3g19jm2o88" autoClearItems="true">
+      <item title="1"/>
+      <item title="2"/>
+      <item title="3"/>
+      <item title="4"/>
+      <item title="5"/>
+      <item title="6"/>
+      <item title="7"/>
+      <item title="8"/>
+      <item title="9"/>
+      <item title="10"/>
+    </list>
+    <graph id="n2_m2o8" name="n2" xy="573,71" size="521,224" type="rect"/>
+    <list id="n3_m2o8" name="list-hz" xy="579,79" size="506,38" layout="row" overflow="scroll" scroll="horizontal" scrollBarFlags="4" scrollBarRes="ui://ymq3g19jm2o87,ui://ymq3g19jm2o8c" defaultItem="ui://ymq3g19jm2o88" autoClearItems="true">
+      <item title="1"/>
+      <item title="2"/>
+      <item title="3"/>
+      <item title="4"/>
+      <item title="5"/>
+      <item title="6"/>
+      <item title="7"/>
+      <item title="8"/>
+      <item title="9"/>
+      <item title="10"/>
+    </list>
+  </displayList>
+</component>

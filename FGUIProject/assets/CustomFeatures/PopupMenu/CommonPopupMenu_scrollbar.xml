@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="16,200" extention="ScrollBar">
+  <displayList>
+    <graph id="n0_rv49" name="n0" xy="0,0" size="16,200" touchable="false" type="rect" lineSize="0" lineColor="#fff0f0f0" fillColor="#fff0f0f0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n1_rv49" name="bar" xy="0,20" size="16,160" lineSize="0" fillColor="#ffcccccc">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n2_rv49" name="arrow1" src="rv49p" fileName="PopupMenu/CommonPopupMenu_scrollbar_arrow1.xml" xy="0,0" size="16,20">
+      <relation target="" sidePair="width-width"/>
+    </component>
+    <component id="n3_rv49" name="arrow2" src="rv49v" fileName="PopupMenu/CommonPopupMenu_scrollbar_arrow2.xml" xy="0,180" size="16,20">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </component>
+    <component id="n4_rv49" name="grip" src="rv49r" fileName="PopupMenu/CommonPopupMenu_scrollbar_grip.xml" xy="0,20" size="16,20">
+      <relation target="" sidePair="width-width"/>
+    </component>
+  </displayList>
+  <ScrollBar/>
+</component>

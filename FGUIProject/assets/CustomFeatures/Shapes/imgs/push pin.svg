@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>复制</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="复制" transform="translate(1.000000, 1.000000)" stroke-width="1.2">
+            <path d="M5.33333333,5.33333333 L5.33333333,2.47619048 C5.33333333,1.42421952 6.18612429,0.571428571 7.23809524,0.571428571 L17.5238095,0.571428571 C18.5757805,0.571428571 19.4285714,1.42421952 19.4285714,2.47619048 L19.4285714,12.7619048 C19.4285714,13.8138757 18.5757805,14.6666667 17.5238095,14.6666667 L14.9714286,14.6666667" id="路径" stroke="#868686"></path>
+            <rect id="矩形" stroke="#686868" x="0.571428571" y="5.33333333" width="14.0952381" height="14.0952381" rx="2"></rect>
+        </g>
+    </g>
+</svg>
