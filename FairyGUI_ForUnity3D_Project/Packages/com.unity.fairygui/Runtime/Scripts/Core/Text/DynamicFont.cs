@@ -1,5 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// 注释掉下一行就和原始的 FairyGUI 实现一样了
+#define FONT_OVERSAMPLING
+
 using UnityEngine;
 
 namespace FairyGUI
@@ -9,6 +10,39 @@ namespace FairyGUI
     /// </summary>
     public class DynamicFont : BaseFont
     {
+#if FONT_OVERSAMPLING
+        /* 为字符应用超采样，后续从字体文件生成位图时请求的分辨率增加，但最终生成的四边形位置和大小维持原状
+         */
+
+        const int k_size_limit_0 = 25;
+        const int k_size_limit_1 = 50;
+
+        const int k_oversampling_0 = 4;
+        const int k_oversampling_1 = 2;
+
+        const float k_inv_oversampling_0 = 0.25f;
+        const float k_inv_oversampling_1 = 0.5f;
+
+        [System.Runtime.CompilerServices.MethodImpl(
+            System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static int GetOverSampling(int fontSize)
+        {
+            if (fontSize <= k_size_limit_0) { return k_oversampling_0; }
+            else if (fontSize <= k_size_limit_1) { return k_oversampling_1; }
+            return 1;
+        }
+        [System.Runtime.CompilerServices.MethodImpl(
+            System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        static float GetInvOverSamling(int fontSize)
+        {
+            if (fontSize <= k_size_limit_0) { return k_inv_oversampling_0; }
+            else if (fontSize <= k_size_limit_1) { return k_inv_oversampling_1; }
+            return 1;
+        }
+#endif
+
+        static readonly float inv_SupScale = 1f * inv_SupScale;
+
         Font _font;
         int _size;
         float _ascent;
@@ -112,19 +146,31 @@ namespace FairyGUI
         override public void PrepareCharacters(string text, TextFormat format, float fontSizeScale)
         {
             SetFormat(format, fontSizeScale);
-
+#if FONT_OVERSAMPLING
+            int __size = _size * GetOverSampling(_size);
+            _font.RequestCharactersInTexture(text, __size, _style);
+#else
             _font.RequestCharactersInTexture(text, _size, _style);
+#endif
         }
 
         override public bool GetGlyph(char ch, out float width, out float height, out float baseline)
         {
-            if (!_font.GetCharacterInfo(ch, out _char, _size, _style))
+            int __size =
+#if FONT_OVERSAMPLING
+                _size * GetOverSampling(_size)
+#else
+                _size
+#endif
+                ;
+
+            if (!_font.GetCharacterInfo(ch, out _char, __size, _style))
             {
                 if (ch == ' ')
                 {
                     //space may not be prepared, try again
-                    _font.RequestCharactersInTexture(" ", _size, _style);
-                    _font.GetCharacterInfo(ch, out _char, _size, _style);
+                    _font.RequestCharactersInTexture(" ", __size, _style);
+                    _font.GetCharacterInfo(ch, out _char, __size, _style);
                 }
                 else
                 {
@@ -141,13 +187,13 @@ namespace FairyGUI
 
             if (_format.specialStyle == TextFormat.SpecialStyle.Subscript)
             {
-                height /= SupScale;
-                baseline /= SupScale;
+                height *= inv_SupScale;
+                baseline *= inv_SupScale;
             }
             else if (_format.specialStyle == TextFormat.SpecialStyle.Superscript)
             {
-                height = height / SupScale + baseline * SupOffset;
-                baseline *= (SupOffset + 1 / SupScale);
+                height = height * inv_SupScale + baseline * SupOffset;
+                baseline *= (SupOffset + 1 * inv_SupScale);
             }
 
             height = Mathf.RoundToInt(height);
@@ -155,10 +201,18 @@ namespace FairyGUI
 
             if (keepCrisp)
             {
-                width /= UIContentScaler.scaleFactor;
-                height /= UIContentScaler.scaleFactor;
-                baseline /= UIContentScaler.scaleFactor;
+                // Unity Mono 的实现下单精度浮点数除法很慢
+                float inv_scaleFactor = 1f / UIContentScaler.scaleFactor;
+                width *= inv_scaleFactor;
+                height *= inv_scaleFactor;
+                baseline *= inv_scaleFactor;
             }
+
+#if FONT_OVERSAMPLING
+            float invOverSampling = GetInvOverSamling(_size);
+            width *= invOverSampling;
+            height *= invOverSampling;
+#endif
 
             return true;
         }
@@ -194,14 +248,25 @@ namespace FairyGUI
 
             if (keepCrisp)
             {
-                topLeft /= UIContentScaler.scaleFactor;
-                bottomRight /= UIContentScaler.scaleFactor;
+                float inv_scaleFactor = 1f / UIContentScaler.scaleFactor;
+                topLeft.x *= inv_scaleFactor;
+                topLeft.y *= inv_scaleFactor;
+                bottomRight.x *= inv_scaleFactor;
+                bottomRight.y *= inv_scaleFactor;
             }
 
             if (_format.specialStyle == TextFormat.SpecialStyle.Subscript)
                 y = y - Mathf.RoundToInt(_ascent * _scale * SupOffset);
             else if (_format.specialStyle == TextFormat.SpecialStyle.Superscript)
-                y = y + Mathf.RoundToInt(_ascent * _scale * (1 / SupScale - 1 + SupOffset));
+                y = y + Mathf.RoundToInt(_ascent * _scale * (1 * inv_SupScale - 1 + SupOffset));
+
+#if FONT_OVERSAMPLING
+            float invOverSampling = GetInvOverSamling(_size);
+            topLeft.x *= invOverSampling;
+            topLeft.y *= invOverSampling;
+            bottomRight.x *= invOverSampling;
+            bottomRight.y *= invOverSampling;
+#endif
 
             topLeft.x += x;
             topLeft.y += y;
@@ -237,7 +302,7 @@ namespace FairyGUI
             {
                 for (int b = 0; b < 4; b++)
                 {
-                    Vector3 boldOffset = BOLD_OFFSET[b];
+                    ref readonly Vector3 boldOffset = ref BOLD_OFFSET[b];
 
                     vb.vertices.Add(bottomLeft + boldOffset);
                     vb.vertices.Add(topLeft + boldOffset);
