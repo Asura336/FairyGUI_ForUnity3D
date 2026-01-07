@@ -11,7 +11,7 @@ namespace FairyGUI.Foundations.Collections
     /// <see cref="ArrayPool{T}"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public readonly struct ArrayHandle<T> : IDisposable, IList<T>, IReadOnlyList<T>
+    internal readonly struct ArrayHandle<T> : IDisposable, IList<T>, IReadOnlyList<T>
     {
         static readonly ArrayPool<T> s_pool = ArrayPool<T>.Shared;
 

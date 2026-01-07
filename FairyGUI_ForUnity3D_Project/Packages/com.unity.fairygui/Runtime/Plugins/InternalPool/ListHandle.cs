@@ -10,7 +10,7 @@ namespace FairyGUI.Foundations.Collections
     /// 见：<see cref="New()"/>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public readonly struct ListHandle<T> : IDisposable, IList<T>, IReadOnlyList<T>
+    internal readonly struct ListHandle<T> : IDisposable, IList<T>, IReadOnlyList<T>
     {
         const int defaultCapacity = 1024;
         static readonly InternalCollectionPool<T, List<T>> s_pool = new InternalCollectionPool<T, List<T>>(

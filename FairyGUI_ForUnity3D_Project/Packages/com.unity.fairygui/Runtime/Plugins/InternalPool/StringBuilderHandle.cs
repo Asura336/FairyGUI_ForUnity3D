@@ -11,7 +11,7 @@ namespace FairyGUI.Foundations.Collections
     /// 从全局对象池取出的 <see cref="StringBuilder"/> 句柄，配合 using 语法使用，线程安全。
     /// 见：<see cref="New()"/>
     /// </summary>
-    public readonly struct StringBuilderHandle : IDisposable, ISerializable
+    internal readonly struct StringBuilderHandle : IDisposable, ISerializable
     {
         const int defaultCapacity = 1024;
         static readonly InternalObjectPool<StringBuilder> s_pool = new InternalObjectPool<StringBuilder>(
