@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Text;
 using System.Text.RegularExpressions;
 using FairyGUI.Foundations.Number;
@@ -189,13 +189,12 @@ namespace FairyGUI.Extensions
         bool _titleFocus = false;
 
         readonly GComponent contentPane;
-        readonly Func<GComponent, GObject> getTitleObject;
         IntegerStringInstance integerStringInstance;
         FloatStringInstance floatStringInstance;
 
-        GObject _titleObject;
-        GObject _handle;
-        Controller focus;
+        readonly GObject _titleObject;
+        readonly GObject _handle;
+        readonly Controller focus;
 
         EventListener _onValueChanged;
         EventListener _onSubmit;
@@ -203,10 +202,7 @@ namespace FairyGUI.Extensions
         public NumberInputObject(GComponent contentPane)
         {
             this.contentPane = contentPane;
-        }
 
-        public void ConstructFromXML()
-        {
             _handle = contentPane.GetChild("handle");
             if (_handle != null)
             {
@@ -299,7 +295,7 @@ namespace FairyGUI.Extensions
             }
         }
 
-        public GObject TitleObject => _titleObject ??= getTitleObject(contentPane);
+        public GObject TitleObject => _titleObject;
 
         /// <summary>
         /// 允许在输入框附近拖拽赋值

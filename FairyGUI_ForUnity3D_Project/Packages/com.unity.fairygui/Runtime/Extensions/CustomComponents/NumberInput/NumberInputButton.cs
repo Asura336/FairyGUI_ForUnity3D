@@ -1,4 +1,4 @@
-using FairyGUI.Utils;
+﻿using FairyGUI.Utils;
 
 namespace FairyGUI.Extensions
 {
@@ -41,7 +41,6 @@ namespace FairyGUI.Extensions
             base.ConstructFromXML(xml);
 
             numberInput = new NumberInputObject(this);
-            numberInput.ConstructFromXML();
         }
 
         public override void Setup_AfterAdd(ByteBuffer buffer, int beginPos)
