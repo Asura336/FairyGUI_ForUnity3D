@@ -211,7 +211,9 @@ namespace FairyGUI
 #if FONT_OVERSAMPLING
             float invOverSampling = GetInvOverSamling(_size);
             width *= invOverSampling;
+            float prevHeight = height;
             height *= invOverSampling;
+            baseline += (height - prevHeight) * 0.25f * invOverSampling;
 #endif
 
             return true;
