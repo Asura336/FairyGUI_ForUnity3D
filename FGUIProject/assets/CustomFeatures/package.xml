@@ -37,6 +37,12 @@
     <component id="jj7y16" name="SDFShape_changeAlphaCom1.xml" path="/Shapes/"/>
     <component id="jj7y17" name="ChangeAlphaTest.xml" path="/Shapes/" exported="true"/>
     <component id="kc8c18" name="CommonPopupMenu_label.xml" path="/PopupMenu/" exported="true"/>
+    <component id="qnjf19" name="FontOverSamplingTest.xml" path="/FontOverSampling/" exported="true"/>
+    <component id="qnjf1a" name="FontButton_16.xml" path="/FontOverSampling/"/>
+    <component id="qnjf1b" name="FontButton_14.xml" path="/FontOverSampling/"/>
+    <component id="qnjf1c" name="FontButton_24.xml" path="/FontOverSampling/"/>
+    <component id="qnjf1d" name="FontButton_32.xml" path="/FontOverSampling/"/>
+    <component id="qnjf1e" name="FontButton_12.xml" path="/FontOverSampling/"/>
   </resources>
   <publish name=""/>
 </packageDescription>

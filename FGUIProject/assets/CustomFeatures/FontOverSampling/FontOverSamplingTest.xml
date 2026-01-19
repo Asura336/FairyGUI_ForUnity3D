@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="800,600">
+  <displayList>
+    <text id="n0_qnjf" name="n0" xy="78,42" size="54,19" font="ui://xms8bct0r7iv12" fontSize="12" color="#131313" singleLine="true" text="小12号字"/>
+    <text id="n1_qnjf" name="n1" xy="78,81" size="62,22" font="ui://xms8bct0r7iv12" fontSize="14" color="#131313" singleLine="true" text="小14号字"/>
+    <text id="n2_qnjf" name="n2" xy="78,123" size="70,24" font="ui://xms8bct0r7iv12" fontSize="16" color="#131313" singleLine="true" text="中16号字"/>
+    <text id="n3_qnjf" name="n3" xy="78,167" size="103,34" font="ui://xms8bct0r7iv12" fontSize="24" color="#131313" singleLine="true" text="中24号字"/>
+    <text id="n4_qnjf" name="n4" xy="78,221" size="136,44" font="ui://xms8bct0r7iv12" fontSize="32" color="#131313" singleLine="true" text="大32号字"/>
+    <text id="n5_qnjf" name="n5" xy="78,285" size="203,64" font="ui://xms8bct0r7iv12" fontSize="48" color="#131313" singleLine="true" text="大48号字"/>
+    <text id="n6_qnjf" name="n6" xy="78,369" size="269,84" font="ui://xms8bct0r7iv12" fontSize="64" color="#131313" singleLine="true" text="大64号字"/>
+    <graph id="n7_qnjf" name="n7" xy="79,46" size="50,12" type="rect" lineColor="#ff0000ff" fillColor="#3333ff33"/>
+    <graph id="n8_qnjf" name="n8" xy="80,84" size="58,14" type="rect" lineColor="#ff0000ff" fillColor="#3333ff33"/>
+    <graph id="n9_qnjf" name="n9" xy="81,127" size="65,16" type="rect" lineColor="#ff0000ff" fillColor="#3333ff33"/>
+    <graph id="n10_qnjf" name="n10" xy="81,172" size="97,24" type="rect" lineColor="#ff0000ff" fillColor="#3333ff33"/>
+    <graph id="n11_qnjf" name="n11" xy="81,227" size="130,32" type="rect" lineColor="#ff0000ff" fillColor="#3333ff33"/>
+    <graph id="n12_qnjf" name="n12" xy="82,293" size="194,48" type="rect" lineColor="#ff0000ff" fillColor="#3333ff33"/>
+    <graph id="n13_qnjf" name="n13" xy="84,380" size="257,64" type="rect" lineColor="#ff0000ff" fillColor="#3333ff33"/>
+    <component id="n14_qnjf" name="n14" src="qnjf1a" fileName="FontOverSampling/FontButton_16.xml" xy="150,127" size="78,16">
+      <Button title="标题文字"/>
+    </component>
+    <component id="n15_qnjf" name="n15" src="qnjf1c" fileName="FontOverSampling/FontButton_24.xml" xy="181,172" size="112,24"/>
+    <component id="n16_qnjf" name="n16" src="qnjf1b" fileName="FontOverSampling/FontButton_14.xml" xy="142,84" size="62,14"/>
+    <component id="n17_qnjf" name="n17" src="qnjf1d" fileName="FontOverSampling/FontButton_32.xml" xy="215,227" size="130,32"/>
+    <component id="n18_qnjf" name="n18" src="qnjf1e" fileName="FontOverSampling/FontButton_12.xml" xy="133,46" size="52,12"/>
+  </displayList>
+</component>

@@ -73,3 +73,12 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+
+FairyGUI_ForUnity3D_Project/Library
+FairyGUI_ForUnity3D_Project/Logs
+FairyGUI_ForUnity3D_Project/obj
+FairyGUI_ForUnity3D_Project/Temp
+FairyGUI_ForUnity3D_Project/UserSettings
+FairyGUI_ForUnity3D_Project/.vsconfig

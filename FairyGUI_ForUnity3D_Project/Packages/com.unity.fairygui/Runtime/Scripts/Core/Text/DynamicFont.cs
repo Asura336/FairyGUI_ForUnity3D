@@ -39,6 +39,13 @@ namespace FairyGUI
             else if (fontSize <= k_size_limit_1) { return k_inv_oversampling_1; }
             return 1;
         }
+
+        static float GetBaseLineOffset(int fontSize)
+        {
+            int sizeLimit = fontSize > k_size_limit_1 ? k_size_limit_1 : k_size_limit_0;
+
+            return (sizeLimit - fontSize) * GetInvOverSamling(fontSize);
+        }
 #endif
 
         static readonly float inv_SupScale = 1f * inv_SupScale;
@@ -209,11 +216,7 @@ namespace FairyGUI
             }
 
 #if FONT_OVERSAMPLING
-            float invOverSampling = GetInvOverSamling(_size);
-            width *= invOverSampling;
-            float prevHeight = height;
-            height *= invOverSampling;
-            baseline += (height - prevHeight) * 0.25f * invOverSampling;
+            width *= GetInvOverSamling(_size);
 #endif
 
             return true;
