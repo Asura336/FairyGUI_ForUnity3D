@@ -97,7 +97,7 @@ namespace FairyGUI
                 if (radius != 0)
                 {
                     int partNumSides = Mathf.Max(1, Mathf.CeilToInt(ToolSet.PI_DIV_8 * radius)) + 1;
-                    float angleDelta = ToolSet.PI_HALF / partNumSides;
+                    float angleDelta = ToolSet.PI_HALF / (partNumSides - 1);
                     float angle = ToolSet.PI_HALF * i;
                     float startAngle = angle;
 
