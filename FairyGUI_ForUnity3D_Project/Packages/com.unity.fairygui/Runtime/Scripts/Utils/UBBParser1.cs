@@ -248,6 +248,8 @@ namespace FairyGUI.Utils
             {
                 switch (src[i])
                 {
+                    case '\0':
+                        return;  // EOF
                     case '\\':
                     {
                         // unescape

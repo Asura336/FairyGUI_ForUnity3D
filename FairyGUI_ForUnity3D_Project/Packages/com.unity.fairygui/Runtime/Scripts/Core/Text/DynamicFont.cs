@@ -48,7 +48,7 @@ namespace FairyGUI
         }
 #endif
 
-        static readonly float inv_SupScale = 1f * inv_SupScale;
+        static readonly float inv_SupScale = 1f / SupScale;
 
         Font _font;
         int _size;
@@ -200,7 +200,7 @@ namespace FairyGUI
             else if (_format.specialStyle == TextFormat.SpecialStyle.Superscript)
             {
                 height = height * inv_SupScale + baseline * SupOffset;
-                baseline *= (SupOffset + 1 * inv_SupScale);
+                baseline *= (SupOffset + inv_SupScale);
             }
 
             height = Mathf.RoundToInt(height);
