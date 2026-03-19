@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using FairyGUI.Foundations.Collections;
 using UnityEngine;
 
 namespace FairyGUI.Utils
@@ -284,7 +285,7 @@ namespace FairyGUI.Utils
         public void Parse(string aSource)
         {
             Reset();
-            
+
             XML lastOpenNode = null;
             sNodeStack.Clear();
 
@@ -352,7 +353,7 @@ namespace FairyGUI.Utils
 
         public string ToXMLString(bool includeHeader)
         {
-            StringBuilder sb = new StringBuilder();
+            using var sb = StringBuilderHandle.New();
             if (includeHeader)
                 sb.Append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
             ToXMLString(sb, 0);
