@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UnityEngine;
+using FairyGUI.Foundations.Collections;
 using FairyGUI.Utils;
+using UnityEngine;
 
 namespace FairyGUI
 {
@@ -685,7 +686,7 @@ namespace FairyGUI
 
                 if (flag)
                 {
-                    StringBuilder buffer = new StringBuilder();
+                    using var buffer = StringBuilderHandle.New();
                     ParseText(buffer, _parsedText, -1);
                     elementCount = _elements.Count;
                     _parsedText = buffer.ToString();
@@ -693,7 +694,7 @@ namespace FairyGUI
             }
             else
             {
-                StringBuilder buffer = new StringBuilder();
+                using var buffer = StringBuilderHandle.New();
                 int i = 0;
                 while (i < elementCount)
                 {

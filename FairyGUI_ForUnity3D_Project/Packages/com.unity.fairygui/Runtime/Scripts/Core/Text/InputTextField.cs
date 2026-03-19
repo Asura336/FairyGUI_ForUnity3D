@@ -581,21 +581,24 @@ namespace FairyGUI
                 textField.text = _text;
 
             _composing = compositionString.Length;
-            if (_composing > 0)
-            {
-                StringBuilder buffer = new StringBuilder();
-                GetPartialText(0, _caretPosition, buffer);
-                buffer.Append(compositionString);
-                GetPartialText(_caretPosition, -1, buffer);
 
-                textField.text = buffer.ToString();
-            }
+            // 这一段可能是没必要的，去掉也不影响行为
+            // 但是存在的话，使用拼音输入法时其他没有在编辑的输入文本框可能出现拼音输入法的预输入拼音
+            //if (_composing > 0)
+            //{
+            //    using var buffer = StringBuilderHandle.New();
+            //    GetPartialText(0, _caretPosition, buffer);
+            //    buffer.Append(compositionString);
+            //    GetPartialText(_caretPosition, -1, buffer);
+
+            //    textField.text = buffer.ToString();
+            //}
         }
 
         string EncodePasswordText(string value)
         {
             int textLen = value.Length;
-            StringBuilder tmp = new StringBuilder(textLen);
+            using var tmp = StringBuilderHandle.New();
             int i = 0;
             while (i < textLen)
             {
@@ -628,7 +631,7 @@ namespace FairyGUI
             if (_selectionStart == _caretPosition)
                 return string.Empty;
 
-            StringBuilder buffer = new StringBuilder();
+            using var buffer = StringBuilderHandle.New();
             if (_selectionStart < _caretPosition)
                 GetPartialText(_selectionStart, _caretPosition, buffer);
             else
