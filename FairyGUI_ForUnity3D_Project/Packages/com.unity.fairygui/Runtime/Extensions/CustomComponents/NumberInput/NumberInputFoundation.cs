@@ -451,14 +451,26 @@ namespace FairyGUI.Extensions
             }
             catch (ArithmeticException err)
             {
-                if (Debug.isDebugBuild) { Debug.LogError($"{nameof(NumberInputObject)}::{err.Message}"); }
-                // 遇到解析错误，尝试恢复上一次输入
-                Value = _value;
+                if (OnInputArithmeticExceptionFallback is null)
+                {
+                    if (Debug.isDebugBuild) { Debug.LogError($"{nameof(NumberInputObject)}::{err.Message}"); }
+                    // 遇到解析错误，尝试恢复上一次输入
+                    Value = _value;
+                }
+                else
+                {
+                    OnInputArithmeticExceptionFallback();
+                }
             }
 
             if (focus != null) { focus.selectedIndex = 0; }
             _touchSelectCounter = 0;
         }
+
+        /// <summary>
+        /// 数字输入框解析表达式失败时触发此消息，为 null 时使用缺省的行为
+        /// </summary>
+        public Action OnInputArithmeticExceptionFallback;
 
         void TitleObj_onFocusIn()
         {
