@@ -24,7 +24,11 @@ namespace FairyGUI.Extensions
         protected string? separatorURL;
 
         protected GObject? _expandingItem;
-        protected WindowsLikePopupMenu? _parentMenu;
+        /// <summary>
+        /// 指向上级菜单的引用，单个菜单隐藏时如果有上级菜单引用则不回收进池，直到整个菜单隐藏时一起回收
+        /// <br/> 这个状态和 <see cref="PopupMenuEnvironment"/> 一起工作
+        /// </summary>
+        public WindowsLikePopupMenu? _parentMenu;
         readonly TimerCallback _showSubMenu = null!;
         readonly TimerCallback _closeSubMenu = null!;
         TimerCallback? _checkOnRollOut;
@@ -811,7 +815,9 @@ namespace FairyGUI.Extensions
 
         void __removeFromStage()
         {
-            _parentMenu = null;
+            // _parentMenu 用作校验，因为使用了池，要防止菜单实例被提前回收，需要这个字段在回收时检查
+            // 见 PopupMenuEnvironment.cs
+            //_parentMenu = null;
 
             if (_expandingItem != null)
             {
@@ -834,10 +840,19 @@ namespace FairyGUI.Extensions
             var item = (GObject)context.sender;
             if (item is WindowsLikePopupMenuItem menuItem)
             {
-                menuItem.InvokeNextMenuFactory();
+                var nextMenu = menuItem.InvokeNextMenuFactory();
+                if (nextMenu != null)
+                {
+                    nextMenu._parentMenu ??= this;
+                }
             }
             if ((item.data is NextMenuData) || _expandingItem != null)
             {
+                if (item.data is NextMenuData n && n._parentMenu != this)
+                {
+                    Debug.LogError("[Context Menu] item nextMenu not self");
+                }
+
                 Timers.inst.CallLater(_showSubMenu, item);
 
                 // [2022-03-23] 使用异步的判断，检查鼠标在子菜单上
@@ -866,9 +881,11 @@ namespace FairyGUI.Extensions
                 CloseSubMenu(null);
             }
 
-            if (item.data is NextMenuData)
+            if (item.data is NextMenuData nextMenu)
             {
                 ShowSubMenu(item);
+                // 事件的上游是鼠标划过菜单项，展开菜单，在这里回收状态
+                nextMenu._list.selectedIndex = -1;
             }
         }
 
@@ -890,6 +907,11 @@ namespace FairyGUI.Extensions
             {
                 if (expandingItem_data is NextMenuData popup)
                 {
+                    if (popup._parentMenu != this)
+                    {
+                        Debug.LogError("[Context Menu] item nextMenu not self");
+                    }
+
                     var cp = popup.contentPane;
                     var pt = cp.GlobalToLocal(Stage.inst.touchPosition);
                     if (pt.x >= 0 && pt.y >= 0 &&

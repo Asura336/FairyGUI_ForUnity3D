@@ -72,7 +72,17 @@ namespace FairyGUI.Extensions
             var sender = (PopupMenuClass)e.sender;
             if (pool.Contains(sender)) { return; }
 
-            pool.Enqueue(sender);
+            if (sender._parentMenu != null)
+            {
+                //Debug.Log("[Context Menu] close but has parent");
+                // has parent, hold
+                return;
+            }
+
+            //Debug.Log("[Context Menu] close root");
+
+
+            // 必然从根菜单开始回收
 
             var list = sender.list;
             int count = list.numItems;
@@ -84,9 +94,13 @@ namespace FairyGUI.Extensions
                 // see AppendNextMenuItem
                 if (item.data is PopupMenuClass nextMenu)
                 {
+                    nextMenu._parentMenu = null;
                     nextMenu.onClose.Call();
                 }
+                item.data = null;
             }
+
+            pool.Enqueue(sender);
         }
 
         public PopupMenuClass GetEmptyInstance() => GetMenuInstance();
@@ -366,7 +380,13 @@ namespace FairyGUI.Extensions
             if (item.InvokeNextMenuFactory() is PopupMenuClass popup)
             {
                 popup.season = menu.season;
+                popup._parentMenu ??= menu;
                 popup.Show(item, PopupDirection.Auto, menu);
+
+                if (popup._parentMenu != menu)
+                {
+                    Debug.LogError("[Context Menu] item nextMenu not self");
+                }
 
                 var _thisRoot = item.root;
                 var popupSize = popup.contentPane.size;
