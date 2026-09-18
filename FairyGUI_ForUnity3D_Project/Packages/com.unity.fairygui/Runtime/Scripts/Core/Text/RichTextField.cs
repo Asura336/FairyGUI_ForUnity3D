@@ -171,9 +171,8 @@ namespace FairyGUI
 
         internal void CleanupObjects()
         {
-            List<HtmlElement> elements = textField.htmlElements;
-            int count = elements.Count;
-            for (int i = 0; i < count; i++)
+            List<HtmlElement> elements = textField.rawHtmlElements;
+            for (int i = elements.Count - 1; i >= 0; i--)
             {
                 HtmlElement element = elements[i];
                 if (element.htmlObject != null)

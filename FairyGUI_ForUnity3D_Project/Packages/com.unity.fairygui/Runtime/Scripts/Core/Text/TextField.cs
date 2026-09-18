@@ -357,6 +357,11 @@ namespace FairyGUI
         }
 
         /// <summary>
+        /// Get htmlElements without BuildLines()
+        /// </summary>
+        internal List<HtmlElement> rawHtmlElements => _elements;
+
+        /// <summary>
         /// 
         /// </summary>
         public List<LineInfo> lines
